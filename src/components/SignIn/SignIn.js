@@ -20,6 +20,24 @@ function SignIn(props) {
     const [signUp, setSignUp] = useState(true)
     const {authSuccess}=props
 
+//     const handleSubmit = (e) => {
+//         e.preventDefault() 
+//         const url= signUp ? 'http://127.0.0.1:8000/my_testApp/create/' :'http://127.0.0.1:8000/my_testApp/login/'
+//          var credentials = JSON.stringify({
+//             "username": e.target['email'],
+//             "password": e.target['password']
+//           });
+//           axios.post(url,{'Content-Type':'application/json'},credentials).then(res=> {
+//              authSuccess(res.data);
+//              props.history.push('/todoapp')
+//             }).catch(err=>console.log("error",err))
+     
+// console.log(props)
+       
+//     }
+  
+
+// for restapi
     const handleSubmit = (e) => {
         e.preventDefault() 
         const url= signUp ? 'https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=' :'https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key='
@@ -56,8 +74,8 @@ console.log(props)
             </div>
             <form onSubmit={handleSubmit}>
             <div style={style.common}>
-                    <label > Email  <EmailIcon/>:</label>
-            <Input   type='email' name='email' placeholder='Email' />
+                    <label > username  <EmailIcon/>:</label>
+            <Input   type='text' name='email' placeholder='Email' />
                   
                 </div>
                 <div style={style.common}>

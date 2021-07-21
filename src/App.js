@@ -22,7 +22,7 @@ function App() {
     <BrowserRouter>
       <StagingArea/>
     {/* <TodoApp/> */}
-    </BrowserRouter>
+    </BrowserRouter >
     </Provider>
    
 

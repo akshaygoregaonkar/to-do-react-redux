@@ -44,7 +44,7 @@ function VisiblityFilters(props) {
                     {InCompleted.map((item, index) => <div key={index}>
 
 
-                        <li> <div>Task:{item.Task} </div>Description : {item.Description}<div> Date :{item.Date}</div></li>
+                        <li> <div>Task:{item.Task} </div>Description : {item.Description}<div> Date :{String(item.Date)}</div></li>
 
                     </div>)} </div> : <></>}
 
